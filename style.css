@@ -1,0 +1,118 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+*{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/860/241/original/space-and-planet-background-free-vector.jpg');
+    font-family: 'Pixelify Sans', cursive;
+}
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.info{
+    text-align: center;
+    color: aliceblue;
+}
+.text-container{
+    font-size: 1rem;
+    color: white;
+    width: 30vw;
+    height: 60vh;
+    display: grid;
+    position: relative;
+    background-color: blueviolet;
+    border: solid 5px brown;
+    border-radius: 10px;
+    text-align: center;
+}
+.formContainer{
+    width: fit-content;
+}
+.qr-card{
+    background-color: blueviolet;
+    border: solid 5px brown;
+    padding: 3rem;
+    position: absolute;
+    bottom: -30%;
+    right: -30%;
+    display: none;
+}
+.showQRContainer{
+    display: block;
+}
+.formCard{
+    position: relative;
+}
+.formCard button{
+    position: absolute;
+    right: 2rem;
+    top: 0.3rem;
+}
+input{
+    height: 1.9rem;
+    width: 20rem;
+    margin: 2px;
+    border: solid white 1px;
+    border-radius: 5px;
+    color: white;
+}
+button{
+    height: 1.7rem;
+    position: absolute;
+    width: max-content;
+    right: -1rem;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+}
+
+.buttonContainer{
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    right: 13px;
+}
+
+
+@media (max-width: 820px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 50vh;
+        text-align: center;
+    }
+    .text-container{
+        margin-left: 1rem;
+        width: 73vw;
+        height: 50vh;
+    }
+    input{
+        width: 90%;
+    }
+    button{
+        height: 1.7rem;
+        position: absolute;
+        width: max-content;
+        right: -1rem;
+        background-color: blueviolet;
+        color: white;
+        cursor: pointer;
+        border: solid 1px whitesmoke;
+        border-radius: 5px;
+    }
+    .buttonContainer{
+        width: fit-content;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .qr-card{
+        border-radius: 12px;
+        width: 40vw;
+        height: 25vh;
+        bottom: -30%;
+        left: 20%;
+    }
+}

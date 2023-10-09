@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Generator</title>
+</head>
+<body>
+    <div class="container"> 
+        <div class="info">
+            <h3>Javascript Project</h3>
+            <h1>QR CODE <br>Generator</h1>
+            <h4>JS.HTML.CSS</h4>
+        </div>
+        <div class="text-container">
+            <div class="formContainer">
+                <h1>Generador de Código QR</h1>
+                    <div class="formCard">
+                        <div class="inputContainer">
+                            <input type="url" id="website" name="website" placeholder="Ingrese el Link" required />
+                        <div class="buttonContainer">
+                            <button type="button" onclick="generateQRCode()">Generar QR</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="qr-card">
+        
+                <div id="qrcode-container">
+                <div id="qrcode" class="qrcode"></div>
+                </div>
+            
+                <script type="text/javascript">
+                function generateQRCode() {
+                    
+                    
+                    let website = document.getElementById("website").value;
+                    if (website) {
+                    let qrcodeContainer = document.getElementById("qrcode");
+                    let qrcodecontainer = document.querySelector(".qr-card");
+                    qrcodecontainer.classList.toggle('showQRContainer');
+                    let size = window.innerWidth < 768 ? 160 : 250;  
+                    qrcodeContainer.innerHTML = "";
+                    new QRCode(qrcodeContainer,{
+                        text:website,
+                        width:size,
+                        height:size
+                    });
+                    }}
+                </script>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
